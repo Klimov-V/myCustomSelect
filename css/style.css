@@ -54,6 +54,7 @@ body {
 }
 .select__item:hover {
     cursor: pointer;
+    background-color: #eee;
 }
 .select__item:not(:first-of-type) {
     margin-top: 10px;
