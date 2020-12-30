@@ -1,26 +1,134 @@
 [
   {
     "id": "1",
-    "name": "Jon"
+    "name": "Jon",
+    "job": [
+      {
+        "id": "1.1",
+        "secialisation": "designer"
+      },
+      {
+        "id": "1.2",
+        "secialisation": "developer"
+      },
+      {
+        "id": "1.3",
+        "secialisation": "saile"
+      },
+      {
+        "id": "1.4",
+        "secialisation": "qa"
+      }
+    ]
   },
   {
     "id": "2",
-    "name": "Mike"
+    "name": "Mike",
+    "job": [
+      {
+        "id": "2.1",
+        "secialisation": "designer"
+      },
+      {
+        "id": "2.2",
+        "secialisation": "developer"
+      },
+      {
+        "id": "2.3",
+        "secialisation": "saile"
+      },
+      {
+        "id": "2.4",
+        "secialisation": "qa"
+      }
+    ]
   },
   {
     "id": "3",
-    "name": "Dony"
+    "name": "Dony",
+    "job": [
+      {
+        "id": "3.1",
+        "secialisation": "designer"
+      },
+      {
+        "id": "3.2",
+        "secialisation": "developer"
+      },
+      {
+        "id": "3.3",
+        "secialisation": "saile"
+      },
+      {
+        "id": "3.4",
+        "secialisation": "qa"
+      }
+    ]
   },
   {
     "id": "4",
-    "name": "Ilon"
+    "name": "Ilon",
+    "job": [
+      {
+        "id": "4.1",
+        "secialisation": "designer"
+      },
+      {
+        "id": "4.2",
+        "secialisation": "developer"
+      },
+      {
+        "id": "4.3",
+        "secialisation": "saile"
+      },
+      {
+        "id": "4.4",
+        "secialisation": "qa"
+      }
+    ]
   },
   {
     "id": "5",
-    "name": "Greg"
+    "name": "Greg",
+    "job": [
+      {
+        "id": "5.1",
+        "secialisation": "designer"
+      },
+      {
+        "id": "5.2",
+        "secialisation": "developer"
+      },
+      {
+        "id": "5.3",
+        "secialisation": "saile"
+      },
+      {
+        "id": "5.4",
+        "secialisation": "qa"
+      }
+    ]
   },
   {
     "id": "6",
-    "name": "Rupert"
+    "name": "Rupert",
+    "job": [
+      {
+        "id": "6.1",
+        "secialisation": "designer"
+      },
+      {
+        "id": "6.2",
+        "secialisation": "developer"
+      },
+      {
+        "id": "6.3",
+        "secialisation": "saile"
+      },
+      {
+        "id": "6.4",
+        "secialisation": "qa"
+      }
+    ]
   }
 ]

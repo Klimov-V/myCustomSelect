@@ -48,7 +48,7 @@ body {
 .select__item {
     width: 400px;
     height: 50px;
-    margin: 0 auto;
+    margin: 0 auto 10px;
     padding: 0 20px;  
     line-height: 50px;  
 }
@@ -56,9 +56,7 @@ body {
     cursor: pointer;
     background-color: #eee;
 }
-.select__item:not(:first-of-type) {
-    margin-top: 10px;
-}
+
 .select__area,
 .select__item {
     border: 1px solid #aaa;

@@ -1,9 +1,8 @@
 (function () {
 
-    const body          = document.querySelector('body'),
-          select        = document.querySelector('.select'),
+    const select        = document.querySelector('.select'),
+          container     = document.querySelector('.container'),
           selectArea    = document.querySelector('.select__area'),
-          selectItems   = document.querySelectorAll('.select__item'),
           selectedItem  = document.querySelector('.selected__item'),
           deleteItemBtn = document.querySelector('.deleteItemBtn');
 
@@ -25,46 +24,60 @@
 
     let data = fetchData(dataUrl)
                     .then(data => {
-                        return data; 
+                        return new Promise((resolve, reject) => {
+                            resolve(data)
+                        }); 
                     })
-    console.log(data);
-
+                    
+    data.then(clientData => {
+        initial(clientData, selectList)
+    })
+                    
     selectArea.addEventListener('click', oppenSelect);
 
-    function initial(data) {
+    async function initial(data, list) {
+        let selectItemsist = []
         data.forEach((obj) => {
             let li = document.createElement("li")
 
             li.classList.add('select__item')
             li.innerHTML = obj.name
 
-            console.log(li);
-            selectList.push(li)
+            list.appendChild(li)
+            selectItemsist.push(li)
+        })
+
+        selectItemsist.forEach(item => {
+            addEvent(item)
         })
     }
-
-
-    for (selectItem of selectItems) {
-        selectItem.addEventListener('click', addItem)
+    async function addEvent(target) {
+        target.addEventListener('click', addMainItem)
     }
     
-    function oppenSelect (e) {
+    function oppenSelect () {
         selectList.classList.toggle('select__list--opened');
     }
 
-    function addItem (e) {
-        (select.hasAttribute('data-multy') && 
-            (selectArea.innerHTML += item(e.target.innerHTML))) || 
-            (selectArea.innerHTML = e.target.innerHTML)
+    function addMainItem (e) {
+        (selectArea.innerHTML = e.target.innerHTML)
+
+        createSubmenu()
         
         oppenSelect();
     }
 
-    // function item (value) {
-    //     return `<div class="selected__item">
-    //                 ${value} 
-    //                 <button class="deleteItemBtn">&#10006;</button>
-    //             </div>`
-    // }
+    function createSubmenu () {
+        let subSelect = document.createElement("div"),
+            subMenu = document.createElement("ul")
+
+        subSelect.classList.add("select__area", "select__area_sub")
+        subMenu.classList.add("select__list", "select__list_sub")
+
+        initial(data, subMenu)
+
+        container.appendChild(subSelect)
+        container.appendChild(subMenu)
+    }
 
 })();
